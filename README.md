@@ -10,7 +10,15 @@ https://rishad-aj.github.io/point-pointer/
 
 ## How it works
 
-The page loads `positions.json` (cursor coordinates + image index pairs), then shows the image whose hotspot is nearest to your pointer.
+The page ships with all 711 fingertip positions inlined (mirrored in `positions.json` for reference), then shows the image whose hotspot is nearest to your pointer. Everything loads locally — no backend, no iframe, no external requests.
+
+## Refresh the photos
+
+`images/` already contains all 711 photos (0.jpg–710.jpg). To re-download or fill in missing files:
+
+```sh
+node download-images.mjs
+```
 
 ## Preview locally
 
